@@ -1,7 +1,9 @@
 package cl.test.serviceexample.services;
 
+import cl.test.serviceexample.controllers.entities.ClientResponse;
+
 public interface Service {
 
-    void getService(Long id, String name);
+    ClientResponse getService(Long id, String name);
 
 }

@@ -1,5 +1,6 @@
 package cl.test.serviceexample.controllers;
 
+import cl.test.serviceexample.controllers.entities.ClientResponse;
 import cl.test.serviceexample.services.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,9 +19,8 @@ public class ServiceExampleController {
     private Service service;
 
     @RequestMapping(value = "/get", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> getService(@RequestParam Long id, @RequestParam String name) {
-        service.getService(id, name);
-        return new ResponseEntity<>("Hello World!", HttpStatus.OK);
+    public ResponseEntity<ClientResponse> getService(@RequestParam Long id, @RequestParam String name) {
+        return new ResponseEntity<>(service.getService(id, name), HttpStatus.OK);
     }
 
 }

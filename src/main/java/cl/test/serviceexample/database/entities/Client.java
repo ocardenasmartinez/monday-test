@@ -1,5 +1,6 @@
 package cl.test.serviceexample.database.entities;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.Column;
