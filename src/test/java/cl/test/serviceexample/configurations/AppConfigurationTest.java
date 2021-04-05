@@ -1,2 +1,4 @@
-package cl.test.serviceexample.configurations;public class AppConfigurationTest {
+package cl.test.serviceexample.configurations;
+
+public class AppConfigurationTest {
 }
