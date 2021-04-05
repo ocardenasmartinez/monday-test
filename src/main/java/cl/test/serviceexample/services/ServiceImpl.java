@@ -16,6 +16,9 @@ public class ServiceImpl implements Service {
         client.setId(id);
         client.setName(name);
         clientRepository.save(client);
+        /*if(true) {
+            throw new IllegalArgumentException();
+        }*/
         return ClientResponse.builder().id(client.getId()).name(client.getName()).build();
     }
 

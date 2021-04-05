@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("service")
-public class ServiceExampleController {
+public class ServiceExampleController extends BaseController{
 
     @Autowired
     private Service service;
